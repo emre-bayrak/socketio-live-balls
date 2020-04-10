@@ -23,7 +23,6 @@ block content
               .description.message(ng-if="!message.type.message") disconnected
               .description.message(ng-if="message.type.message") connected
 
-          .item(ng-repeat="message in messages")
             .content(ng-if="message.type.code")
               a.header.name {{ message.username }} &nbsp;
               .description.message {{ message.text }}
