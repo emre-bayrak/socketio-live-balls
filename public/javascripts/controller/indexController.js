@@ -80,6 +80,7 @@ app.controller('indexController', ['$scope', 'indexFactory', ($scope, indexFacto
             socket.on('newMessage', (message) => {
                 $scope.messages.push(message);
                 $scope.$apply();
+                showBubble(message.socketId, message.text);
                 scrollTop();
             })
 
